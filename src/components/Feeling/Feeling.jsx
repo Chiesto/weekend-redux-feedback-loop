@@ -12,6 +12,7 @@ function Feeling(){
         //dispatch our feeling to the store
         dispatch({type: 'FEELING', payload:howFeeling})
         // TODO: put the history part here to move to the next slide
+        history.push('/understanding')
     }
 
     return(

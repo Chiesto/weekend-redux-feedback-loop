@@ -3,6 +3,11 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 
+//importing my components
+import Understanding from '../Understanding/Understanding';
+import Feeling from '../Feeling/Feeling';
+import Support from '../Support/Support';
+
 function App() {
 
   return (
@@ -17,15 +22,15 @@ function App() {
           <Feeling />
         </Route>
         {/* path to the second page to see how well they are understanding the content */}
-        <Route>
-
+        <Route exact path='/understanding'>
+          <Understanding />
         </Route>
         {/* path to the 3rd page to see how well they are being supported */}
-        <Route>
-
+        <Route exact path="/support">
+          <Support/>
         </Route>
         {/* path to the 4th page for comments */}
-        <Route>
+        <Route exact path="/comments">
 
         </Route>
         {/* path to the 5th page to review feedback */}
