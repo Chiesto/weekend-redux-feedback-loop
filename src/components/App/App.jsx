@@ -10,6 +10,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 import Header from '../Header/Header'
+import Feedback from '../Feedback/Feedback';
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
         </Route>
         {/* path to the 6th page - confirmation that feedback was submitted */}
         <Route exact path="/feedback">
-
+          <Feedback/>
         </Route>
         {/* path to the 7th page to show all the feedback results */}
         <Route>

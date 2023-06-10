@@ -10,24 +10,32 @@ import { Provider } from "react-redux";
 const feelingToday = (state = 0, action) =>{
     if(action.type === 'FEELING'){
         return action.payload;
+    } else if(action.type === 'RESET'){
+        return 0;
     }
     return state;
 }
 const understandingToday = (state=0, action)=>{
     if(action.type === 'UNDERSTANDING'){
         return action.payload;
+    } else if(action.type === 'RESET'){
+        return 0;
     }
     return state;
 }
 const supportToday = (state=0, action)=>{
     if(action.type === 'SUPPORT'){
         return action.payload;
+    } else if(action.type === 'RESET'){
+        return 0;
     }
     return state;
 }
 const commentsToday = (state='', action)=>{
     if(action.type === 'COMMENTS'){
         return action.payload;
+    } else if(action.type === 'RESET'){
+        return '';
     }
     return state;
 }
