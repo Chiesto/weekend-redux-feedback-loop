@@ -12,7 +12,7 @@ function Comments(){
         //dispatch comments to the store
         dispatch({type: 'COMMENTS', payload:gaugeComments});
         // TODO: put the history part here to move to the next slide
-        history.push('/comments');
+        history.push('/feedback');
     }
 
     return(

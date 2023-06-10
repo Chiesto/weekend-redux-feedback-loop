@@ -25,13 +25,21 @@ const supportToday = (state=0, action)=>{
     }
     return state;
 }
+const commentsToday = (state='', action)=>{
+    if(action.type === 'COMMENTS'){
+        return action.payload;
+    }
+    return state;
+}
 
 
 //combining my stores so I can use them in the provider as one thing.
 const storeInstance = createStore(
     combineReducers({
         feelingToday,
-        understandingToday
+        understandingToday,
+        supportToday,
+        commentsToday
     }),
     applyMiddleware(logger)
 );
