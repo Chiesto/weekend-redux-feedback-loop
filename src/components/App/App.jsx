@@ -7,6 +7,8 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import Understanding from '../Understanding/Understanding';
 import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 
 function App() {
 
@@ -27,18 +29,18 @@ function App() {
         </Route>
         {/* path to the 3rd page to see how well they are being supported */}
         <Route exact path="/support">
-          <Support/>
+          <Support />
         </Route>
         {/* path to the 4th page for comments */}
         <Route exact path="/comments">
-
+          <Comments />
         </Route>
         {/* path to the 5th page to review feedback */}
-        <Route>
-
+        <Route exact path="/review">
+          <ReviewFeedback />
         </Route>
         {/* path to the 6th page - confirmation that feedback was submitted */}
-        <Route>
+        <Route exact path="/feedback">
 
         </Route>
         {/* path to the 7th page to show all the feedback results */}

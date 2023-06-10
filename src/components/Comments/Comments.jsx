@@ -12,7 +12,7 @@ function Comments(){
         //dispatch comments to the store
         dispatch({type: 'COMMENTS', payload:gaugeComments});
         // TODO: put the history part here to move to the next slide
-        history.push('/feedback');
+        history.push('/review');
     }
 
     return(
@@ -21,10 +21,8 @@ function Comments(){
             <p>Comments</p>
             <form onSubmit={submitComments}>
                 <input 
-                type='number'
+                type='text'
                 required
-                min={1}
-                max={5}
                 onChange={(event)=>setGaugeComments(event.target.value)}
                 />
                 <button type='submit'>NEXT</button>
