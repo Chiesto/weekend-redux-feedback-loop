@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
-
+import Header from '../Header/Header'
 function Support (){
     const dispatch = useDispatch();
     const history = useHistory();
@@ -18,6 +18,7 @@ function Support (){
 
     return(
     <div>
+        <Header/>
         <h1>How well are you being supported?</h1>
         <p>Support?</p>
         <form onSubmit={submitSupport}>

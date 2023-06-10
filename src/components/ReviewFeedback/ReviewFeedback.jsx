@@ -1,16 +1,17 @@
 import { useSelector } from "react-redux";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
+import Header from '../Header/Header'
 
 function ReviewFeedback(){
     const history = useHistory();
     //grabbing my store variables
-    const feelings = useSelector(store=>store.feelingToday);
+    const feeling = useSelector(store=>store.feelingToday);
     const understanding = useSelector(store=>store.understandingToday);
     const support = useSelector(store=>store.supportToday);
     const comments = useSelector(store=>store.commentsToday);
     const dataToSend={
-        feelings,
+        feeling,
         understanding,
         support,
         comments
@@ -28,9 +29,10 @@ function ReviewFeedback(){
 
     return(
         <div>
+            <Header/>
             <h1>Review Your Feedback</h1>
             <br/>
-            <p>Feelings: {feelings}</p>
+            <p>Feelings: {feeling}</p>
             <br/>
             <p>Understanding: {understanding}</p>
             <br/>

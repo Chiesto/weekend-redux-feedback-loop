@@ -9,15 +9,12 @@ import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import Header from '../Header/Header'
 
 function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
       <Router>
         {/* path to the main page to assess how the user is feeling today */}
         <Route exact path="/">
