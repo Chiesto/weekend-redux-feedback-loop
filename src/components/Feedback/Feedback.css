@@ -1,0 +1,19 @@
+.page{
+    justify-content: center;
+    align-items: center;
+}
+#feedback{
+    border: 1px solid black;
+    margin: 50px;
+    width: 750px;
+}
+#thank-you{
+    border: 1px solid black;
+    height: 500px;
+    width: 750px;
+    margin: 50px;
+    
+}
+#thank-you h1{
+    margin: 80px;
+}

@@ -9,7 +9,6 @@ import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
-import Header from '../Header/Header'
 import Feedback from '../Feedback/Feedback';
 
 function App() {

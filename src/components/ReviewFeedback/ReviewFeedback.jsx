@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 import Header from '../Header/Header'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function ReviewFeedback(){
     const history = useHistory();
@@ -29,7 +30,6 @@ function ReviewFeedback(){
 
     return(
         <div>
-            <Header/>
             <h1>Review Your Feedback</h1>
             <br/>
             <p>Feelings: {feeling}</p>
@@ -41,6 +41,13 @@ function ReviewFeedback(){
             <p>Comments: {comments}</p>
             <br/>
             <button onClick={submitFeedback}>SUBMIT</button>
+            <div id="link-container">
+                Change your feedback?<br/>
+                <Link to='/'>Feeling</Link>
+                <Link to='/understanding'>Understood</Link>
+                <Link to='/support'>Support</Link>
+                <Link to='/comments'>Comments</Link>
+            </div>
         </div>
     )
 }

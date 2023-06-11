@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Header from '../Header/Header'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Comments(){
     const dispatch = useDispatch();
@@ -24,11 +25,13 @@ function Comments(){
             <form onSubmit={submitComments}>
                 <input 
                 type='text'
-                required
                 onChange={(event)=>setGaugeComments(event.target.value)}
                 />
                 <button type='submit'>NEXT</button>
             </form>
+            <p>
+                <Link to="/review">Review your information</Link>
+            </p>
         </div>
     )
 }

@@ -1,7 +1,11 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Header from "../Header/Header";
+import { Button } from "@mui/material/";
+import './Understanding.css'
+
 function Understanding (){
     const dispatch = useDispatch();
     const history = useHistory();
@@ -28,8 +32,11 @@ function Understanding (){
             max={5}
             onChange={(event)=>setGaugeUnderstanding(event.target.value)}
             />
-            <button type='submit'>NEXT</button>
+            <Button id='nextBtn'type='submit'>NEXT</Button>
         </form>
+        <p>
+            <Link to="/review">Review your information</Link>
+        </p>
     </div>
     )
 }

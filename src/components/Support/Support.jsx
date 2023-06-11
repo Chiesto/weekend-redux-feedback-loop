@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Header from '../Header/Header'
 function Support (){
     const dispatch = useDispatch();
@@ -31,6 +32,9 @@ function Support (){
             />
             <button type='submit'>NEXT</button>
         </form>
+        <p>
+            <Link to="/review">Review your information</Link>
+        </p>
     </div>
     )
 }

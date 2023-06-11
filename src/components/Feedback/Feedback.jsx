@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
+import './Feedback.css'
 
 function Feedback(){
     const history = useHistory();
@@ -16,13 +18,13 @@ function Feedback(){
 
 
     return(
-        <div>
-            <div>
+        <div className="page">
+            <div id="feedback">
                 <h1>Feedback!</h1>
             </div>
-            <div>
+            <div id="thank-you">
                 <h1>Thank You!</h1>
-                <button onClick={formComplete}>Leave New Feedback</button>
+                <Button variant='contained' onClick={formComplete}>Leave New Feedback</Button>
             </div>
         </div>
     )

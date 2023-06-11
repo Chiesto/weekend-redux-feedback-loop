@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Header from '../Header/Header'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 function Feeling(){
     const dispatch = useDispatch();
     const history = useHistory();
@@ -30,6 +31,9 @@ function Feeling(){
             />
             <button type='submit'>NEXT</button>
         </form>
+        <p>
+            <Link to="/review">Review your information</Link>
+        </p>
     </div>
     )
 }
